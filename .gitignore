@@ -1,0 +1,193 @@
+### Операционные системы ###
+# Системные файлы macOS
+.DS_Store           # Атрибуты папок
+.Trash-*            # Корзина
+._*                 # Ресурсные вилки
+.Spotlight-V100     # Индексация
+.VolumeIcon.icns    # Иконки томов
+
+# Системные файлы Windows
+Thumbs.db           # Кэш миниатюр
+Desktop.ini         # Настройки папок
+$RECYCLE.BIN/       # Корзина
+*.cab               # Архивы установщика
+*.msi               # Пакеты установки
+*.msix              # Современные пакеты
+*.msm               # Слияния установщика
+*.msp               # Патчи установщика
+*.lnk               # Ярлыки
+*.stackdump         # Дампы памяти
+ehthumbs.db         # Альтернативный кэш миниатюр
+ehthumbs_vista.db   # Кэш для Windows Vista+
+Thumbs.db:encryptable # Зашифрованный кэш
+
+# Системные файлы Linux
+.fuse_hidden*       # Скрытые FUSE-файлы
+
+### Редакторы и IDE ###
+# JetBraны (IntelliJ, PyCharm и др.)
+.idea/              # Конфигурация проекта
+*.iml               # Модули проекта
+*.iws               # Рабочие пространства
+
+# Visual Studio Code
+.vscode/            # Конфигурация
+.history/           # Локальная история файлов
+*.vsix              # Расширения
+.ionide             # Плагин F# для VSCode
+
+# Другие редакторы
+*.suo               # Пользовательские настройки VS
+*.swp               # Swap-файлы Vim
+*.bak               # Резервные копии
+*~                  # Временные файлы
+.spyderproject      # Spyder IDE
+.spyproject         # Spyder IDE
+.ropeproject        # Rope IDE
+
+### Бинарные и исполняемые файлы ###
+*.exe               # Исполняемые файлы Windows
+*.dll               # Библиотеки Windows
+*.so                # Библиотеки Linux
+*.dylib             # Библиотеки macOS
+*.a                 # Статические библиотеки
+*.lib               # Библиотеки компилятора
+*.out               # Выходные файлы компилятора
+*.app               # Приложения macOS
+*.ipa               # Приложения iOS
+*.apk               # Приложения Android
+*.class             # Байт-код Java
+*.jar               # Архивы Java
+*.war               # Веб-архивы Java
+*.ear               # Архивы J2EE
+*.nar               # Архивы Maven
+
+### Логи и временные данные ###
+*.log               # Файлы журналов
+*.sql               # Дампы баз данных
+*.sqlite            # Файлы SQLite
+*.dump              # Дампы памяти
+*.cache             # Кэш-файлы
+*.pid               # PID-файлы процессов
+*.seed              # Файлы инициализации
+pip-log.txt         # Логи pip
+pip-delete-this-directory.txt # Флаг удаления pip
+
+### Среды разработки и зависимости ###
+# Виртуальные окружения Python
+.env
+.venv
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Кэш и артефакты Python
+__pycache__/        # Байт-код
+*.py[cod]           # Скомпилированные файлы
+*$py.class          # Скомпилированные Jython-файлы
+.python-version     # Версия Python (pyenv)
+.pytest_cache/      # Кэш pytest
+.mypy_cache/        # Кэш mypy
+.hypothesis/        # Кэш Hypothesis
+.pdm.toml           # Конфиг PDM
+.pdm-python         # Python для PDM
+.pdm-build/         # Сборки PDM
+__pypackages__/     # Пакеты PEP 582
+
+# Артефакты сборки Python
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+*.egg
+MANIFEST
+*.manifest          # Манифесты PyInstaller
+*.spec              # Спеки PyInstaller
+
+# Node.js
+node_modules/       # Зависимости
+.npm/               # Кэш npm
+.pnp.*              # PnP Yarn
+.yarn/              # Кэш Yarn
+
+# Rust
+/target/            # Артефакты сборки
+Cargo.lock          # Версии зависимостей
+
+# Go
+/bin/               # Исполняемые файлы
+/pkg/               # Пакеты
+
+### Фреймворки и библиотеки ###
+# Django
+db.sqlite3          # База данных по умолчанию
+db.sqlite3-journal  # Журнал SQLite
+local_settings.py   # Локальные настройки
+media/              # Медиафайлы
+
+# Flask
+instance/           # Экземпляр приложения
+.webassets-cache    # Кэш ассетов
+
+# Scrapy
+.scrapy             # Данные Scrapy
+
+# Jupyter
+.ipynb_checkpoints  # Контрольные точки
+
+# IPython
+profile_default/    # Профиль по умолчанию
+ipython_config.py   # Конфигурация
+
+# Celery
+celerybeat-schedule # Расписания
+celerybeat.pid      # PID-файл
+
+### Тестирование и покрытие ###
+.coverage           # Отчет coverage.py
+.coverage.*         # Частичные отчеты
+htmlcov/            # HTML-отчеты
+.tox/               # Виртуальные окружения tox
+.nox/               # Виртуальные окружения nox
+coverage.xml        # Отчет в XML
+nosetests.xml       # Отчет nose
+*.junit             # Отчеты JUnit
+.nyc_output/        # Отчеты nyc
+
+### Документация ###
+docs/_build/        # Сборка Sphinx
+site/               # Сборка MkDocs
+_book/              # Сборка GitBook
+
+### Системы сборки ###
+.gradle/            # Кэш Gradle
+build/              # Артефакты сборки
+out/                # Выходные каталоги
+bin/                # Бинарные файлы
+gen/                # Сгенерированные файлы
+.angular/cache      # Кэш Angular
+
+### Версионный контроль ###
+.gitattributes      # Атрибуты Git
+.gitconfig          # Конфигурация Git
+!.gitkeep           # Пустые каталоги-заглушки
+
+### Рекомендации (раскомментируйте по необходимости) ###
+## Node.js ##
+# yarn.lock           # Фиксация версий для Yarn
+# package-lock.json   # Фиксация версий для npm
+
+## Python ##
+# Pipfile.lock        # Фиксация версий для Pipenv
+# poetry.lock         # Фиксация версий для Poetry
+# uv.lock             # Фиксация версий для uv
+
+## Мобильная разработка ##
+# /local.properties   # Локальные настройки Android
+# /Pods/              # Зависимости iOS
+# *.xcworkspace       # Рабочее пространство Xcode
+# /.dart_tool/        # Кэш Dart
+# /.flutter-plugins   # Плагины Flutter
