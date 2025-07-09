@@ -356,7 +356,7 @@ cd smart_home_project
 # 2. Настройка бэкенда
 cd backend
 python -m venv venv
-source venv/bin/activate
+.\venv\Scripts\activate
 pip install --upgrade pip
 
 # Установка Django и зависимостей

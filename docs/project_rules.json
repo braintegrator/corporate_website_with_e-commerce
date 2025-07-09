@@ -1,0 +1,165 @@
+{
+  "project": {
+    "name": "smart_home_corporate_ecommerce",
+    "description": "Corporate website with e-commerce for smart home systems",
+    "architecture": "Headless (Backend: Django, Frontend: Next.js, API: GraphQL)"
+  },
+  "backend": {
+    "framework": {
+      "name": "Django",
+      "version": "4.x",
+      "role": "Core web framework",
+      "dependencies": ["psycopg2", "django-redis", "gunicorn"]
+    },
+    "cms": {
+      "name": "Wagtail",
+      "role": "Headless CMS for content management",
+      "dependencies": ["wagtail-grapple"]
+    },
+    "ecommerce": {
+      "name": "Saleor",
+      "role": "E-commerce platform with GraphQL API",
+      "dependencies": ["graphene-django"]
+    },
+    "database": {
+      "name": "PostgreSQL",
+      "role": "Relational database",
+      "dependencies": ["psycopg2"]
+    },
+    "cache_broker": {
+      "name": "Redis",
+      "role": "Caching and message broker",
+      "dependencies": ["django-redis"]
+    },
+    "task_queue": {
+      "name": "Celery",
+      "role": "Asynchronous task processing",
+      "dependencies": ["redis"]
+    },
+    "payment": {
+      "name": "Stripe",
+      "role": "Payment processing",
+      "dependencies": ["django-stripe"]
+    },
+    "shipping": {
+      "name": "EasyPost",
+      "role": "Shipping integration",
+      "dependencies": ["easypost"]
+    },
+    "api": {
+      "name": "GraphQL",
+      "role": "API for frontend communication",
+      "dependencies": ["graphene-django"]
+    },
+    "monitoring": {
+      "name": "Sentry",
+      "role": "Error monitoring"
+    },
+    "testing": {
+      "name": "Pytest",
+      "role": "Backend testing",
+      "dependencies": ["pytest-django", "factory-boy"]
+    },
+    "linting": {
+      "tools": ["Flake8", "Black", "isort"],
+      "role": "Code linting and formatting"
+    },
+    "containerization": {
+      "name": "Docker",
+      "role": "Containerization"
+    }
+  },
+  "frontend": {
+    "framework": {
+      "name": "Next.js",
+      "version": "14.x",
+      "role": "Frontend framework for SSR/SSG",
+      "dependencies": ["typescript"]
+    },
+    "language": {
+      "name": "TypeScript",
+      "role": "Strict typing"
+    },
+    "styling": {
+      "name": "Tailwind CSS",
+      "role": "Utility-first CSS"
+    },
+    "ui_library": {
+      "name": "Chakra UI",
+      "role": "UI components"
+    },
+    "api_client": {
+      "name": "Apollo Client",
+      "role": "GraphQL queries"
+    },
+    "auth": {
+      "name": "NextAuth.js",
+      "role": "Authentication"
+    },
+    "animation": {
+      "name": "Framer Motion",
+      "role": "UI animations"
+    },
+    "linting": {
+      "tools": ["ESLint", "Prettier"],
+      "role": "Code linting and formatting",
+      "dependencies": ["typescript-eslint", "eslint-plugin-react"]
+    },
+    "testing": {
+      "name": "Cypress",
+      "role": "E2E testing"
+    },
+    "analytics": {
+      "name": "Google Analytics 4",
+      "role": "User behavior tracking"
+    },
+    "image_optimization": {
+      "name": "Cloudinary",
+      "role": "Image optimization"
+    }
+  },
+  "infrastructure": {
+    "cicd": {
+      "name": "GitHub Actions",
+      "role": "CI/CD pipeline"
+    },
+    "frontend_hosting": {
+      "name": "Vercel",
+      "role": "Frontend hosting"
+    },
+    "backend_hosting": {
+      "name": "DigitalOcean/AWS",
+      "role": "Backend and database hosting"
+    },
+    "proxy": {
+      "name": "Nginx",
+      "role": "Reverse proxy"
+    },
+    "monitoring": {
+      "tools": ["Prometheus", "Grafana"],
+      "role": "Performance monitoring"
+    },
+    "logging": {
+      "tools": ["Loki", "Grafana"],
+      "role": "Log aggregation"
+    }
+  },
+  "relationships": {
+    "frontend_to_backend": {
+      "protocol": "GraphQL",
+      "endpoint": "/graphql",
+      "client": "Apollo Client",
+      "server": "Saleor/Wagtail"
+    },
+    "backend_to_database": {
+      "protocol": "SQL",
+      "client": "psycopg2",
+      "server": "PostgreSQL"
+    },
+    "backend_to_cache": {
+      "protocol": "Redis",
+      "client": "django-redis",
+      "server": "Redis"
+    }
+  }
+}
